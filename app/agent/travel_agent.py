@@ -27,7 +27,7 @@ def travel_agent(query: str):
             elif tool_call.name == "search_flights":
                 result = search_flights(**(tool_call.args or {}))
             elif tool_call.name == "search_hotels":
-                result = search_ho (tool_call.args or {}))
+                result = search_hotels(**(tool_call.args or {}))
             elif tool_call.name == "get_iternary":
                 result = get_iternary(**(tool_call.args or {}))
             else:
